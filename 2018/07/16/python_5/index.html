@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="�����ļ�������">
 <meta property="og:description" content="List列表一、概念：List数据，首先它可以存储各种数据类型，比如：数值、字符串、布尔型等等；其次，列表中的元素可以随时进行删除、修改、增加，其长度随之变化；同时，列表也是有序的，我们同样可以使用循环对其进行遍历。 二、声明与赋值1、声明列表同时进行赋值list1 = [1,2,3,4,5]list2 = [‘one’,’two’,’three’]list3 = [1,’two’,3,’four">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-07-17T00:47:22.174Z">
+<meta property="og:updated_time" content="2018-07-17T00:55:57.403Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python组合数据类型">
 <meta name="twitter:description" content="List列表一、概念：List数据，首先它可以存储各种数据类型，比如：数值、字符串、布尔型等等；其次，列表中的元素可以随时进行删除、修改、增加，其长度随之变化；同时，列表也是有序的，我们同样可以使用循环对其进行遍历。 二、声明与赋值1、声明列表同时进行赋值list1 = [1,2,3,4,5]list2 = [‘one’,’two’,’three’]list3 = [1,’two’,3,’four">
@@ -210,22 +210,7 @@
 <p>列表比较运算符操作<br>相当于列表使用普通的比较运算符<br>import operator<br>operator.ge()         大于等于   &gt;=<br>operator.gt()         大于       &gt;<br>operator.eq()       等于         ==<br>operator.ne()        不等于      !=<br>operator.le()           小于等于 &lt;=<br>operator.lt()          小于      &lt;<br>格式：operator.ge(列表1,列表2)<br>返回值：如果符合条件，返回True，反之，返回False</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">冒泡排序</span><br><span class="line">list1 = [80,100,67,1,34,10]</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> m <span class="keyword">in</span> range(len(list1)):</span><br><span class="line">    <span class="keyword">for</span> n <span class="keyword">in</span> range(m+1,len(list1)):</span><br><span class="line">        first = list1[m]</span><br><span class="line">        second = list1[n]</span><br><span class="line">        <span class="keyword">if</span> first &lt; second:</span><br><span class="line">            list1[m] = list1[n]</span><br><span class="line">            list1[n] = first</span><br><span class="line"><span class="built_in">print</span>(list1)</span><br></pre></td></tr></table></figure>
 <p>2)Tuple元组<br>1、元组的概念：元组是值的有序序列，里面可以存储各种数据类型的元素。但是元组一旦被赋值后，其内容就不可被改变。<br>2、声明与赋值<br>第一种，tup = a,b,c,d<br>第二种，tup = (a,b,c,d) 推荐使用该种声明方式。<br>第三种，tup = tuple() 声明一个空的元组对象<br>注意：元组在赋值时，且元素只有一个时，具体情况如下：<br>tuple1 = (1,)或tuple1 = 1,一定要在元素后面加上一个,号，与普通变量赋值进行区分。<br>3、常用操作<br>+、*、in、遍历等等，参考列表。<br>4、元组与列表转换<br>元组转为列表：<br>tuple1 = (1,2,3)<br>list1 = list(tuple1)<br>列表转为元组<br>list1 = [1,2,3]<br>tuple1 = tuple(list1）</p>
-<p><code>`</code> bash<br>元组变列表</p>
-<blockquote>
-<blockquote>
-<blockquote>
-<p>tuple1 = (1,2,3)<br>list(tuple1)<br>[1, 2, 3]</p>
-</blockquote>
-</blockquote>
-</blockquote>
-<p>列表变元组</p>
-<blockquote>
-<blockquote>
-<blockquote>
-<p>list1 = [1,2,3]<br>tuple(list1)<br>(1, 2, 3)</p>
-</blockquote>
-</blockquote>
-</blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">元组变列表</span><br><span class="line">&gt;&gt;&gt; tuple1 = (1,2,3)</span><br><span class="line">&gt;&gt;&gt; list(tuple1)</span><br><span class="line">[1, 2, 3]</span><br><span class="line"></span><br><span class="line">列表变元组</span><br><span class="line">&gt;&gt;&gt; list1 = [1,2,3]</span><br><span class="line">&gt;&gt;&gt; tuple(list1)		   </span><br><span class="line">(1, 2, 3)</span><br></pre></td></tr></table></figure>
 
       
 
@@ -318,6 +303,15 @@
 
   
 <nav id="article-nav">
+  
+    <a href="/2018/07/17/python_6 /" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          for循环输出三角形
+        
+      </div>
+    </a>
   
   
     <a href="/2018/07/13/python_2/" id="article-nav-older" class="article-nav-link-wrap">
