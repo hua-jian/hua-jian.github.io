@@ -155,6 +155,213 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-python_11" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/07/24/python_11/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-python_9" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/07/24/python_9/">Python 函数</a>
+    </h1>
+  
+
+        
+        <a href="/2018/07/24/python_9/" class="archive-article-date">
+  	<time datetime="2018-07-24T06:00:02.699Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-24</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="自定义函数"><a href="#自定义函数" class="headerlink" title="自定义函数"></a>自定义函数</h1><h2 id="1、函数的定义"><a href="#1、函数的定义" class="headerlink" title="1、函数的定义"></a>1、函数的定义</h2><p>函数的格式：<br>def 函数名([参数列表]):<br>    执行代码<br>其中，函数名的命名方式与变量名的要求相同，即只能是数字、字符、下划线三者构成，同时不能由数字开头。<br>另外，函数的参数根据情况，可以有参，也可以无参。同时，参数的个数，可以是1到N个。最后，调用函数时，一定要保证该函数已经被定义。调用的函数名与定义的函数名一致。</p>
+<h2 id="2、函数的调用"><a href="#2、函数的调用" class="headerlink" title="2、函数的调用"></a>2、函数的调用</h2><p>函数在外部调用时，直接写函数名以及函数参数即可，不需要将函数体写出来。同时，函数是否有返回值，由其函数体最后一句代码是否为return来决定的。如果由return语句，那么就意味着该函数有返回值，如果没有返回值就意味着返回值为None。</p>
+<p>注意：函数使用return作为返回值语句，该命令通常放在函数的最后一句，保证函数相关的代码都执行完毕后才返回，如果后面还有其他程序，则不会被执行。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">无返回值：</span><br><span class="line">def user():</span><br><span class="line">    a=5</span><br><span class="line">    <span class="built_in">print</span>(a)</span><br><span class="line">f=user()</span><br><span class="line"><span class="built_in">print</span>(f)</span><br><span class="line">D:\pythoncode&gt;python d:/pythoncode/lesson31.py</span><br><span class="line">5</span><br><span class="line">None</span><br><span class="line">有返回值：</span><br><span class="line">def user():</span><br><span class="line">    a=5</span><br><span class="line">    <span class="built_in">return</span> a</span><br><span class="line">f=user()</span><br><span class="line"><span class="built_in">print</span>(f)</span><br><span class="line">D:\pythoncode&gt;python d:/pythoncode/lesson31.py</span><br><span class="line">5</span><br></pre></td></tr></table></figure></p>
+<h2 id="3、函数的参数"><a href="#3、函数的参数" class="headerlink" title="3、函数的参数"></a>3、函数的参数</h2><p>概念：函数在定义时声明的参数，我们称为形参（形式参数）。形参的作用，主要是用来表明参数顺序、类型和个数。并不代表具体内容。<br>我们在调用函数的时候，根据形参的规定（顺序、类型、个数），传递进来实际的内容。我们称为实参。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">例如：</span><br><span class="line">def display(name,age):   <span class="comment"># 定义函数时声明的形参：name,age</span></span><br><span class="line">    <span class="built_in">print</span>(name,age)</span><br><span class="line"></span><br><span class="line">display(<span class="string">'tom'</span>,22)        <span class="comment">#调用函数时实际传递的参数值：tom, 22</span></span><br></pre></td></tr></table></figure></p>
+<p>1）必须的参数<br>我们在函数定义时，显示声明在函数的参数列表中的参数，这些参数一旦被声明，函数在调用时，必须按照所声明的顺序、个数和数据类型，来传递实际的参数内容。<br>2）关键字参数<br>我们在定义函数时，声明了函数的参数后，在调用函数时我们不仅传递实际的参数内容，同时还将参数名字与之对应，这样保证传递进来的参数如果没有按照函数定义时规定的顺序，也能够正确传递进来。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">def user(name,age):</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">'&#123;&#125;,&#123;&#125;'</span>.format(name,age))   </span><br><span class="line">user(<span class="string">'tom'</span>,<span class="string">'20'</span>)</span><br></pre></td></tr></table></figure></p>
+<p>3)默认参数<br>我们在定义函数时，声明函数的参数，同时可以给这些参数进行赋值，在调用该函数时，如果没有给对应参数传递实参，那么python会默认使用定义函数时所声明的默认参数值。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">def user(name,age=20):</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">'&#123;&#125;,&#123;&#125;'</span>.format(name,age))   </span><br><span class="line">user(<span class="string">'tom'</span>)</span><br></pre></td></tr></table></figure></p>
+<p>4）可变参数<br>普通可变参数：我们在定义函数时，因为参数过多或者不确定具体参数列表的个数，我们还可以采用可变参数来实现。可变参数表示从0到N个参数，采用*参数名<br>注意，此时可变参数类型，为tuple元组类型<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">ddef user(*var):</span><br><span class="line">        <span class="built_in">print</span>(var)</span><br><span class="line">user(1,2,3)</span><br><span class="line">D:\pythoncode&gt;python d:/pythoncode/lesson31.py</span><br><span class="line">(1, 2, 3)</span><br></pre></td></tr></table></figure></p>
+<p>关键字可变参数：我们在定义函数时，通过使用**参数名，来表示0到N个参数，在外部调用函数时，将这些可变参数组装成一个字典。<br>例如：</p>
+<p>def person(name, password, **kw):<br>    print(‘用户名{0}，密码{1}，其他内容{2}’.format(name,password,kw))</p>
+<p>person(‘tom’,’123456’)<br>用户名tom，密码123456，其他内容{}</p>
+<p>person(‘simth’, ‘12345’,sex=’男’, address=’郑州’)<br>用户名simth，密码12345，其他内容{‘sex’: ‘男’, ‘address’: ‘郑州’}<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">def user(*var,**kw):</span><br><span class="line">        <span class="built_in">print</span>(var,kw)</span><br><span class="line">user(1,2,3,name=<span class="string">'tom'</span>,age=<span class="string">'20'</span>,passworld=<span class="string">'123456'</span>)</span><br><span class="line">D:\pythoncode&gt;python d:/pythoncode/lesson31.py</span><br><span class="line">(1, 2, 3) &#123;<span class="string">'name'</span>: <span class="string">'tom'</span>, <span class="string">'age'</span>: <span class="string">'20'</span>, <span class="string">'passworld'</span>: <span class="string">'123456'</span>&#125;</span><br></pre></td></tr></table></figure></p>
+<p>特殊用法：<em><br>在函数定义中，如果单独使用一个</em>号，意味着该<em>后面的参数，为关键字参数声明时必须使用的名字。在调用该函数时，关键字参数的名字要与函数定义中</em>号后面的参数名称一致。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">例如：</span><br><span class="line">def person(name, password, *, city, sex):</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">'用户名&#123;0&#125;，密码&#123;1&#125;，其他内容&#123;2&#125;&#123;3&#125;'</span>.format(name, password, city, sex))</span><br><span class="line"></span><br><span class="line">person(<span class="string">'simth'</span>, <span class="string">'12345'</span>,sex=<span class="string">'男'</span>, city=<span class="string">'郑州'</span>)</span><br><span class="line"></span><br><span class="line">D:\pythoncode&gt;python d:/pythoncode/lesson31.py</span><br><span class="line">用户名simth，密码12345，其他内容郑州男</span><br></pre></td></tr></table></figure></p>
+<h2 id="4、局部变量与全局变量"><a href="#4、局部变量与全局变量" class="headerlink" title="4、局部变量与全局变量"></a>4、局部变量与全局变量</h2><p>1）Python中，函数在调用的时候Python才会给函数一个内存地址，用来执行函数内部的相关代码。<br>2)Python程序在运行时，首先会将程序最外部的变量载入内容，并给其分配相关的内存空间。我们成这种变量为全局变量<br>3）函数中声明的变量，只有在函数被执行时，才会被分配内存空间进行执行。我们成这种变量为局部变量。<br>4）Python程序执行的过程中，执行函数时首先会检查其函数内部的局部变量是否存在，如果存在就调用它，如果不存在就从外部全局变量中进行调用，如果仍然没有发现相关内容，则报错。<br>5）globals()与locals()<br>在Python中，通过globals()观察全局作用域中内容，包括：内置函数、自定义函数、全局变量；通过locals()观察局部作用域中的内容，包括：局部变量，嵌套函数（内部函数）inner<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">a=1</span><br><span class="line">b=2</span><br><span class="line">def func():</span><br><span class="line">    c=3</span><br><span class="line">    d=4</span><br><span class="line">    <span class="built_in">print</span>(globals())</span><br><span class="line">    <span class="built_in">print</span>(locals())</span><br><span class="line">func()</span><br><span class="line">D:\pythoncode&gt;python d:/pythoncode/lesson31.py</span><br><span class="line">外部变量：</span><br><span class="line">&#123;<span class="string">'__name__'</span>: <span class="string">'__main__'</span>, <span class="string">'__doc__'</span>: None, <span class="string">'__package__'</span>: None, <span class="string">'__loader__'</span>: &lt;_frozen_importlib_external.SourceFileLoader object at 0x000000000210B128&gt;, <span class="string">'__spec__'</span>: None, <span class="string">'__annotations__'</span>: &#123;&#125;, <span class="string">'__builtins__'</span>: &lt;module <span class="string">'builtins'</span> (built-in)&gt;, <span class="string">'__file__'</span>: <span class="string">'d:/pythoncode/lesson31.py'</span>, <span class="string">'__cached__'</span>: None, <span class="string">'a'</span>: 1, <span class="string">'b'</span>:</span><br><span class="line">2, <span class="string">'func'</span>: &lt;<span class="keyword">function</span> func at 0x0000000002031E18&gt;&#125;</span><br><span class="line">内部变量：</span><br><span class="line">&#123;<span class="string">'d'</span>: 4, <span class="string">'c'</span>: 3&#125;</span><br></pre></td></tr></table></figure></p>
+<p>6）当函数中出现嵌套情况时，最内层函数执行调用变量，会采用“就近原则”即先查找自身范围内的变量，如果没有找到，则向上查找，直到程序最外部结束。<br>7）global与nonlocal<br>global用来修饰局部变量时，表示该变量将作为全局变量来使用。即不仅在函数中可以被调用，同时在文件最外部也可以被调用。<br>nonlocal用来修饰嵌套函数内部的变量，对父级作用域（外层函数）中的变量进行引用和修改，那么从该层(包括父级)以下都将调用该变量的值。注意，该关键字只能影响其直接父级函数。<br>使用global关键字修饰的变量之前可以并不存在<br>而使用nonlocal关键字修饰的变量在嵌套作用域中必须已经存在。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line">nonlocal的用法：</span><br><span class="line">def first():</span><br><span class="line">    a=12</span><br><span class="line">    def second():</span><br><span class="line">        </span><br><span class="line">        def third():</span><br><span class="line">            print(a)</span><br><span class="line"></span><br><span class="line">            def forth():</span><br><span class="line">                nonlocal a</span><br><span class="line">                a=1</span><br><span class="line">                print(&apos;forth中的a:&#123;&#125;&apos;.format(a))</span><br><span class="line">                </span><br><span class="line">            forth()</span><br><span class="line">            print(&apos;third中的a:&#123;&#125;&apos;.format(a))</span><br><span class="line"></span><br><span class="line">        third()</span><br><span class="line">        print(&apos;second中的a:&#123;&#125;&apos;.format(a))</span><br><span class="line">    </span><br><span class="line">    second()</span><br><span class="line">    print(&apos;first中的a:&#123;&#125;&apos;.format(a))</span><br><span class="line"></span><br><span class="line">first()</span><br><span class="line">D:\pythoncode&gt;python d:/pythoncode/lesson26.py</span><br><span class="line">12</span><br><span class="line">forth中的a:1</span><br><span class="line">third中的a:1</span><br><span class="line">second中的a:1</span><br><span class="line">first中的a:1</span><br><span class="line">nonlocal只将forth本身和他的父级third中的a值改变，并不影响first和second中的值。</span><br><span class="line"></span><br><span class="line">global用法：</span><br><span class="line">a=1</span><br><span class="line">b=2</span><br><span class="line">def func():</span><br><span class="line">    global a</span><br><span class="line">    a=10</span><br><span class="line">func()</span><br><span class="line">print(a)</span><br><span class="line">D:\pythoncode&gt;python d:/pythoncode/lesson31.py</span><br><span class="line">10</span><br></pre></td></tr></table></figure></p>
+<p>总结：在函数中定义的变量，我们成为局部变量。包括在函数内部定义的变量、作为参数传递进来的变量。局部变量起作用的范围，我们称为局部作用域。因为Python在调用局部变量时，需要给它分配内存地址，我们称为这个地址为局部命名空间。<br>在文件最外层定义的变量，我们成为全局变量，可以在文件中的任意位置进行调用。全局变量起作用的范围，我们称为全局作用域。Python在载入文件时，就需要给全局变量分配内存地址，这个地址我们称为全局命名空间。</p>
+<p>Python运行时处理变量的步骤：<br>1、从Python解释器开始执行之后，就在内存中开辟里一个空间，每当遇到一个变量的时候，就把变量名和值之间对应的关系记录下来，但是当遇到函数定义的时候，解释器只是象征性的将函数名读入内存，表示知道这个函数存在了，至于函数内部的变量和逻辑，解释器根本不关心。<br>2、函数执行时，函数中的变量会储存在新开辟出来的内存中，函数中的变量只能在函数内部使用，并且会随着函数执行完毕，这块内存中的所有内容也会被清空</p>
+<h2 id="5、函数嵌套"><a href="#5、函数嵌套" class="headerlink" title="5、函数嵌套"></a>5、函数嵌套</h2><p>根据Python中，对函数的载入和调用特点。我们可以清楚看到，当Python运行相关文件时，如果遇到函数时，会先将其名字载入到内存中（即为函数名指定一个内存地址）。因此我们在使用函数名时，可以有以下三种情况：<br>1）将函数名赋值给变量<br>例如：<br>def f1():<br>   print(‘ok’)</p>
+<p>a = f1<br>这是变量a中的值就是f1()函数名的内存地址。<br>2）将函数名作为容器的元素<br>def f1():<br>   print(‘ok’)<br>ls = [1,2,f1]<br>注意，此时存入到列表ls中的f1，它的值仍然是该函数名对应的内存地址<br>3）将函数名作为另外一个函数的参数，进行传递<br>def f1():<br>   print(‘ok’)</p>
+<p>def f2(x):<br>   x()<br>f2(f1)<br>其执行结果为OK，这种方式类似与函数的普通嵌套,代码如下：<br>def f2():<br>   def f1():<br>      print(‘ok’)<br>   f1()<br>f2()</p>
+<h2 id="6、闭包"><a href="#6、闭包" class="headerlink" title="6、闭包"></a>6、闭包</h2><p>1）闭包格式</p>
+<p>def outer():<br>    print(‘我是外部函数’)<br>    def inner():<br>        print(‘我是闭包函数’)<br>    return inner</p>
+<p>f = outer()<br>f()<br>通过对例子的观察，我们发现闭包函数的写法有如下特点：<br>1、闭包函数作为内部函数，嵌套在外部函数中<br>2、闭包函数会作为外部函数的返回值，进行返回。返回闭包函数时，只返回函数名，不带括号。<br>3、外部调用时，首先要执行外部函数，然后将结果赋值给一个变量，此时该变量对应了闭包函数。<br>4、我们可以通过<strong>closure</strong>内部函数可以观察到，闭包函数的存在。前提是，闭包函数要与外部函数进行数据传递或调用。</p>
+<p>总结：闭包使用的数据，必须是本身定义或外部函数中定义的相关变量，通常需要调用外部函数的数据，形成一个封闭的函数结构。不能与外部数据（全局变量）发生交流。</p>
+<p>2）闭包的应用—装饰器<br>1、概念：装饰器本身仍然是一个函数。是我们对闭包应用的一种具体实现。<br>2、作用：装饰器可以在不改变函数本身功能的情况下，为函数添加额外的功能。诸如：日志、测试、性能检测等。装饰器同样也是返回一个函数对象。<br>3、用法：<br>使用格式：@+装饰器名称<br>普通格式：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">import time</span><br><span class="line">def outer(f):</span><br><span class="line">    def inner(*var):</span><br><span class="line">        start_time = time.time()</span><br><span class="line">        f()</span><br><span class="line">        time.sleep(0.3)  <span class="comment">#时间休眠0.3秒</span></span><br><span class="line">        end_time=time.time()</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">'执行的时间为&#123;&#125;'</span>.format(end_time-start_time))</span><br><span class="line">    <span class="built_in">return</span> inner</span><br><span class="line"></span><br><span class="line">def func(*var):</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">'王丹丹是个大笨蛋'</span>)</span><br><span class="line"></span><br><span class="line">outer(func)()</span><br><span class="line"></span><br><span class="line">D:\pythoncode&gt;python d:/pythoncode/lesson34.py</span><br><span class="line">王丹丹是个大笨蛋</span><br><span class="line">执行的时间为0.30101704597473145</span><br></pre></td></tr></table></figure></p>
+<p>语法糖：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">import time</span><br><span class="line">def outer(f):</span><br><span class="line">    def inner(*var):</span><br><span class="line">        start_time = time.time()</span><br><span class="line">        f()</span><br><span class="line">        time.sleep(0.3)  <span class="comment">#时间休眠0.3秒</span></span><br><span class="line">        end_time=time.time()</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">'执行的时间为&#123;&#125;'</span>.format(end_time-start_time))</span><br><span class="line">    <span class="built_in">return</span> inner</span><br><span class="line">@outer</span><br><span class="line">def func(*var):</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">'王丹丹是个大笨蛋'</span>)</span><br><span class="line"></span><br><span class="line">func()</span><br></pre></td></tr></table></figure></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/07/24/python_9/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-python_10" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/07/24/python_10/">Python高级函数</a>
+    </h1>
+  
+
+        
+        <a href="/2018/07/24/python_10/" class="archive-article-date">
+  	<time datetime="2018-07-24T05:59:59.498Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-24</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="匿名函数"><a href="#匿名函数" class="headerlink" title="匿名函数"></a>匿名函数</h1><p>使用lambda关键字进行修饰，没有显式声明函数的名字。格式如下：<br>lambda 参数：表达式（返回值）<br>注意，在使用匿名函数时，因为其自身的情况限制，匿名函数并不能执行比较复杂的业务逻辑，即函数内的代码不能过多。lambda本身是一个表达式<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">lambda函数拥有自己的命名空间，且不能访问自有参数列表之外或全局命名空间里的参数。（除了自己内部函数，其他函数不能使用）</span><br><span class="line">x=10</span><br><span class="line">y=10</span><br><span class="line">a=lambda x,y:x*y</span><br><span class="line">f=a(2,3)</span><br><span class="line">print(f)</span><br></pre></td></tr></table></figure></p>
+<p>匿名函数：<br>求三个数比大小：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">一、</span><br><span class="line">&gt;&gt;&gt; a=lambda x,y,z:x <span class="keyword">if</span> x&gt;y and x&gt;z <span class="keyword">else</span> (y <span class="keyword">if</span> y&gt;x and y&gt;z <span class="keyword">else</span> z)</span><br><span class="line">&gt;&gt;&gt; a(3,4,5)</span><br><span class="line">5</span><br><span class="line">二、</span><br><span class="line">&gt;&gt;&gt; a=lambda x,y,z:max(x,y,z)</span><br><span class="line">&gt;&gt;&gt; a(3,4,5)</span><br><span class="line">5</span><br><span class="line">三、</span><br><span class="line">def num(x,y,z):</span><br><span class="line">    max=0</span><br><span class="line">    <span class="keyword">if</span> x&gt;y and x&gt;z:</span><br><span class="line">        max=x</span><br><span class="line">    <span class="keyword">elif</span> x&gt;y and x&gt;z:</span><br><span class="line">        max=x    </span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        max=z</span><br><span class="line">    <span class="built_in">return</span> max</span><br><span class="line">max=lambda x,y,z:num(x,y,z)</span><br><span class="line"><span class="built_in">print</span>(max(4,5,6))</span><br></pre></td></tr></table></figure></p>
+<h1 id="map函数（映射函数）"><a href="#map函数（映射函数）" class="headerlink" title="map函数（映射函数）"></a>map函数（映射函数）</h1><p>函数格式：map(func,iterable)<br>返回值：map 对象（迭代器）<br>说明：map函数主要作用是，将指定函数与序列中的元素进行映射，并完成函数中功能的批量操作，返回值为一个迭代器。我们可以使用for循环或nex()函数进行遍历。通常情况下，如果映射的函数较为简单，我们就不单独声明函数，而是采用匿名函数来实现，这样也能提高运行效率。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">def func(x):</span><br><span class="line">    <span class="built_in">print</span>(x**2)</span><br><span class="line">result=map(func,[1,2,3]) (map返回的也是一个迭代器)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(next(result))</span><br><span class="line"><span class="built_in">print</span>(next(result))</span><br><span class="line"><span class="built_in">print</span>(next(result))</span><br><span class="line">D:\pythoncode&gt;python d:/pythoncode/lesson31.py</span><br><span class="line">1</span><br><span class="line">None</span><br><span class="line">4</span><br><span class="line">None</span><br><span class="line">9</span><br><span class="line">None</span><br><span class="line"></span><br><span class="line">next(result)</span><br><span class="line">next(result)</span><br><span class="line">next(result)</span><br><span class="line">D:\pythoncode&gt;python d:/pythoncode/lesson31.py</span><br><span class="line">1</span><br><span class="line">4</span><br><span class="line">9</span><br><span class="line">或者</span><br><span class="line">def func(x):</span><br><span class="line">    <span class="built_in">return</span> x**2</span><br><span class="line">result=map(func,[1,2,3])</span><br><span class="line"><span class="built_in">print</span>(next(result))</span><br><span class="line"><span class="built_in">print</span>(next(result))</span><br><span class="line"><span class="built_in">print</span>(next(result))</span><br><span class="line">D:\pythoncode&gt;python d:/pythoncode/lesson31.py</span><br><span class="line">1</span><br><span class="line">4</span><br><span class="line">9</span><br></pre></td></tr></table></figure></p>
+<p>map函数与匿名函数<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; a=map(lambda x:x**x,[1,2,3])</span><br><span class="line">&gt;&gt;&gt; <span class="keyword">for</span> i <span class="keyword">in</span> a:</span><br><span class="line">	<span class="built_in">print</span>(i)</span><br><span class="line">	</span><br><span class="line">1</span><br><span class="line">4</span><br><span class="line">27</span><br></pre></td></tr></table></figure></p>
+<p>3）reduce函数（归纳函数）<br>函数格式：reduce(func,iterator（迭代器，当为列表时会自动转为生成器）)<br>返回值：返回函数计算结果，具体类型根据函数的返回值来定<br>说明：reduce函数中的func，一定要设为两个参数，用来接收迭代器返回的值。操作顺序为首先接收第一、第二个值，进行运算；运算结果再与第三个值进行运行，以此类推，直到迭代器迭代完全部数据。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">from functools import reduce</span><br><span class="line">def f(x,y):</span><br><span class="line">    <span class="built_in">return</span> x*y</span><br><span class="line">result=reduce(f,range(1,4))    （range（），count（）也是迭代器的一种表达方式）</span><br><span class="line"><span class="built_in">print</span>(result)</span><br><span class="line"></span><br><span class="line">D:\pythoncode&gt;python d:/pythoncode/lesson31.py</span><br><span class="line">6</span><br><span class="line">和result=reduce(lambda x,y:x*y,range(1,4))得到的结果一样</span><br></pre></td></tr></table></figure></p>
+<p>reduce函数（归纳函数）和 lampda函数（匿名函数）的使用<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">from functools import reduce</span><br><span class="line">iter_list1=iter([<span class="string">'a'</span>,<span class="string">'b'</span>,<span class="string">'c'</span>,<span class="string">'d'</span>])</span><br><span class="line">result=reduce(lambda x,y:x+y,iter_list1)</span><br><span class="line"><span class="built_in">print</span>(result)</span><br><span class="line"></span><br><span class="line">D:\pythoncode&gt;python d:/pythoncode/lesson31.py</span><br><span class="line">abcd</span><br></pre></td></tr></table></figure></p>
+<h1 id="filter函数（过滤函数）"><a href="#filter函数（过滤函数）" class="headerlink" title="filter函数（过滤函数）"></a>filter函数（过滤函数）</h1><p>函数格式：filter(func,iterable)<br>返回值：返回一个迭代器<br>说明：过滤函数与映射函数类似，都需要将函数作用于序列中的每个元素，根据函数判断True或False，返回相关元素。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">def func1(x):</span><br><span class="line">    <span class="built_in">return</span> x%2==1</span><br><span class="line">l=filter(func1,[1,2,3,4,5])  （当判断结果为<span class="literal">true</span>时才会返回）</span><br><span class="line"><span class="built_in">print</span>(l)  </span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> l:</span><br><span class="line">    <span class="built_in">print</span>(i)</span><br><span class="line"></span><br><span class="line">D:\pythoncode&gt;python d:/pythoncode/lesson31.py</span><br><span class="line">&lt;filter object at 0x0000000001E7B7F0&gt;   (表明得到的l是一个生成器)</span><br><span class="line">1           </span><br><span class="line">3</span><br><span class="line">5</span><br></pre></td></tr></table></figure></p>
+<p>filter函数（过滤函数）与 lampda函数（匿名函数）的使用<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">l2=filter((lambda x:<span class="string">'python'</span> <span class="keyword">in</span> x),(<span class="string">'hipython'</span>,<span class="string">'python'</span>,<span class="string">'PYTHON'</span>))</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> l2:</span><br><span class="line">    <span class="built_in">print</span>(i)</span><br><span class="line"></span><br><span class="line">D:\pythoncode&gt;python d:/pythoncode/lesson31.py</span><br><span class="line">hipython</span><br><span class="line">python</span><br></pre></td></tr></table></figure></p>
+<h1 id="递归"><a href="#递归" class="headerlink" title="递归"></a>递归</h1><p>递归概念：就是使用自身函数对自身进行调用，每调用一次将当前次的运行结果保存到函数的堆栈中，以副本形式保存，一直到最后完成全部调用。然后逐一向外将当期函数的结果返回并退出到其调用的位置。<br>在Python中，通常推荐使用迭代，递归本身对内存的消耗和运行效率低下的问题较少使用。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">利用递归求1+2+3+4+5的和</span><br><span class="line">def mysum(l):</span><br><span class="line">    <span class="keyword">if</span> not l:</span><br><span class="line">        <span class="built_in">return</span> 0</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="built_in">return</span> l[0]+mysum(l[1:])</span><br><span class="line">mysum([1,2,3,4,5])</span><br><span class="line"><span class="built_in">print</span>(mysum([1,2,3,4,5]))</span><br><span class="line"></span><br><span class="line">D:\pythoncode&gt;python d:/pythoncode/lesson33.py</span><br><span class="line">15</span><br></pre></td></tr></table></figure></p>
+<p>递归 与 reduce函数 的使用<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">求n的阶乘</span><br><span class="line">def func1(n):</span><br><span class="line">    if n==1:</span><br><span class="line">        return 1</span><br><span class="line">    else:</span><br><span class="line">        return n*func1(n-1)</span><br><span class="line">print(func1(6))</span><br><span class="line"></span><br><span class="line">D:\pythoncode&gt;python d:/pythoncode/lesson33.py</span><br><span class="line">720</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">求1！+2！+3！+4！+.....+n!</span><br><span class="line">from functools import reduce</span><br><span class="line">def func1(n):</span><br><span class="line">    <span class="keyword">if</span> n==1:</span><br><span class="line">        <span class="built_in">return</span> 1</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="built_in">return</span> n*func1(n-1)</span><br><span class="line">m=reduce(lambda x,y:x+func1(y),range(4))</span><br><span class="line"><span class="built_in">print</span>(m)</span><br></pre></td></tr></table></figure>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/07/24/python_10/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-python_8" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -182,10 +389,15 @@
 <p>可迭代化（iterable）：表明相关的对象可以创建迭代器对象，同时他们自身都是可以进行for数据遍历的。我们可以使用isinstance()来判断对象是否为可迭代化<br>函数格式：isinstance(对象，类型)<br>返回值：布尔值<br>结果：如果指定的对象属于指定的类型，那么返回True，反之返回False</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">from collections import Iterable</span><br><span class="line">string = <span class="string">'hello'</span></span><br><span class="line"><span class="built_in">print</span>(isinstance(string, Iterable))  =&gt; True</span><br></pre></td></tr></table></figure>
 <p>enumerate()函数<br>函数格式：enumerate(iterable)<br>返回值：生成一个枚举对象<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">例如：</span><br><span class="line">enum = enumberate([<span class="string">'one'</span>,<span class="string">'two'</span>,<span class="string">'three'</span>])</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> enum:</span><br><span class="line">    <span class="built_in">print</span>(i)</span><br><span class="line">    </span><br><span class="line">(0, <span class="string">'one'</span>)</span><br><span class="line">(1, <span class="string">'two'</span>)</span><br><span class="line">(2, <span class="string">'three'</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i,value <span class="keyword">in</span> enum:</span><br><span class="line">    <span class="built_in">print</span>(i, value)</span><br><span class="line">   </span><br><span class="line">0 one</span><br><span class="line">1 two</span><br><span class="line">2 three</span><br></pre></td></tr></table></figure></p>
-<p>生成器<br>1、创建方式<br>第一种，使用列表推导式，将[]改为()，生成一个generator对象<br>第二种，使用函数方式，采用yield关键字来实现<br>2、使用<br>生成器我们通常可以认为一种特殊的迭代器，但是它不需要像迭代器一样去实现<strong>iter</strong>,<strong>next</strong>方法。只需要使用yield关键字，该关键字可以在每次调用生成器函数时起到暂停作用，并将其值进行返回。同时还会记录当前运行值的状态。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">def iter_gene():</span><br><span class="line">    for i in range(10):</span><br><span class="line">        yield i</span><br><span class="line">f=iter_gene()</span><br><span class="line">for item in range(10):</span><br><span class="line">    print(next(f))</span><br></pre></td></tr></table></figure></p>
+<p>4、生成器<br>1、创建方式<br>第一种，使用列表推导式，将[]改为()，生成一个generator对象<br>第二种，使用函数方式，采用yield关键字来实现<br>2、使用<br>生成器我们通常可以认为一种特殊的迭代器，但是它不需要像迭代器一样去实现<strong>iter</strong>,<strong>next</strong>方法。只需要使用yield关键字，该关键字可以在每次调用生成器函数时起到暂停作用，并将其值进行返回。同时还会记录当前运行值的状态。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">def iter_gene():</span><br><span class="line">    for i in range(10):</span><br><span class="line">        yield i</span><br><span class="line">f=iter_gene()</span><br><span class="line">for item in range(10):</span><br><span class="line">    print(next(f))</span><br></pre></td></tr></table></figure></p>
 <p>总结：迭代器和生成器<br>1、容器是一系列的元素集合，str、list、set、dict对象都可以看作是容器，容器都可以进行迭代（即用在while或for循环），凡是这样的容器我们都称为可迭代化对象（Iterable）。<br>2、可迭代化对象都实现了<strong>iter</strong>方法，该方法返回一个迭代器对象。<br>3、迭代器都拥有一个状态字段，用于记录下次迭代返回值。它实现了<strong>next</strong>和<strong>iter</strong>方法，迭代器不会一次性把所有的元素都加载到内存中，而是在需要的时候才生成返回结果。<br>4、生成器是一种特殊的迭代器，它的返回值不是通过return来返回的，而是通过yield来返回的。</p>
 <p>应用:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line">def gene(n):</span><br><span class="line">    i=1000</span><br><span class="line">    </span><br><span class="line">    no=<span class="string">''</span></span><br><span class="line">    <span class="keyword">while</span> True:</span><br><span class="line">        <span class="keyword">if</span> <span class="string">'A'</span>==n:</span><br><span class="line">            no=<span class="string">'A'</span>+str(i)</span><br><span class="line">            i=i+1</span><br><span class="line">            yield no</span><br><span class="line">            </span><br><span class="line">          </span><br><span class="line">        <span class="keyword">elif</span> <span class="string">'B'</span>==n:</span><br><span class="line">            no=<span class="string">'B'</span>+str(i)</span><br><span class="line">            yield no</span><br><span class="line">            i=i+1</span><br><span class="line">        <span class="keyword">elif</span> <span class="string">''</span>==n:</span><br><span class="line">            no=<span class="string">'B'</span>+str(i)</span><br><span class="line">            yield no</span><br><span class="line">            i=i+1</span><br><span class="line">        <span class="keyword">elif</span> <span class="string">'B'</span>==n:</span><br><span class="line">            no=<span class="string">'B'</span>+str(i)</span><br><span class="line">            yield no</span><br><span class="line">            i=i+1</span><br><span class="line">        <span class="keyword">elif</span> <span class="string">'C'</span>==n:</span><br><span class="line">            no=<span class="string">'C'</span>+str(i)</span><br><span class="line">            yield no</span><br><span class="line">            i=i+1</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            pass</span><br><span class="line">a=gene(<span class="string">'A'</span>)</span><br><span class="line">b=gene(<span class="string">'B'</span>)</span><br><span class="line">c=gene(<span class="string">'C'</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">while</span> True:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">'A  精神科: '</span>)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">'B  精神科: '</span>)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">'C  精神科: '</span>)</span><br><span class="line">    n=input(<span class="string">'请选择您要就诊的科室: '</span>)</span><br><span class="line">    <span class="keyword">if</span> n==<span class="string">'A'</span>:</span><br><span class="line">        </span><br><span class="line">        name=input(<span class="string">'请输入您的姓名：'</span>)</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">'请&#123;&#125;患者到&#123;&#125;科室就诊'</span>.format(name,next(a)))</span><br><span class="line">    <span class="keyword">elif</span> n==<span class="string">'B'</span>:</span><br><span class="line">        f=gene(n)</span><br><span class="line">        name=input(<span class="string">'请输入您的姓名：'</span>)</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">'请&#123;&#125;患者到&#123;&#125;科室就诊'</span>.format(name,next(b)))</span><br><span class="line">    <span class="keyword">elif</span> n==<span class="string">'C'</span>:</span><br><span class="line">        f=gene(n)</span><br><span class="line">        name=input(<span class="string">'请输入您的姓名：'</span>)</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">'请&#123;&#125;患者到&#123;&#125;科室就诊'</span>.format(name,next(c)))</span><br></pre></td></tr></table></figure></p>
 <p>结果：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">A  精神科:</span><br><span class="line">B  精神科:</span><br><span class="line">C  精神科:</span><br><span class="line">请选择您要就诊的科室: A</span><br><span class="line">请输入您的姓名：王丹丹</span><br><span class="line">请王丹丹患者到A1000科室就诊</span><br><span class="line">A  精神科:</span><br><span class="line">B  精神科:</span><br><span class="line">C  精神科:</span><br><span class="line">请选择您要就诊的科室: A</span><br><span class="line">请输入您的姓名：老王</span><br><span class="line">请老王患者到A1001科室就诊</span><br></pre></td></tr></table></figure></p>
+<p>5、copy()(浅拷贝)和deepcopy（）（深拷贝）<br>1）浅拷贝：<br>我们使用copy()函数将列表中的元素进行复制，通常对于普通的列表（一维）能够实现完全的值传递，即将本身的副本赋值给另外一个列表。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">list1 = [1,2,3,4,5]</span><br><span class="line">list2 = list1.copy()  <span class="comment">#经list1中的元素赋值给list2，此时他们的值相等</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">'初始化list1的内容&#123;&#125;'</span>.format(list1))</span><br><span class="line"><span class="built_in">print</span>(<span class="string">'初始化list2的内容&#123;&#125;'</span>.format(list2))</span><br><span class="line">list1[3] = 6  <span class="comment">#此时，对list1中索引位3的值进行修改，变为6</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">'改变后list1的内容&#123;&#125;'</span>.format(list1))</span><br><span class="line"><span class="built_in">print</span>(<span class="string">'改变后list2的内容&#123;&#125;'</span>.format(list2))</span><br><span class="line"> 结果：</span><br><span class="line">PS D:\pythoncode&gt; &amp; python d:/pythoncode/lesson11.py</span><br><span class="line">初始化list1的内容[1, 2, 3, 4, 5]</span><br><span class="line">初始化list2的内容[1, 2, 3, 4, 5]</span><br><span class="line">改变后list1的内容[1, 2, 3, 6, 5]  </span><br><span class="line">改变后list2的内容[1, 2, 3, 4, 5]    </span><br><span class="line">PS D:\pythoncode&gt;</span><br><span class="line">观察其结果，list1的列表改变，但是list2的列表值没有改变</span><br><span class="line"></span><br><span class="line">一旦，list1列表结构发生变化，出现子列表嵌套，这时再使用copy()对list2赋值，我们进行对list1里嵌套的值进行改变，list2的嵌套内容也会随之改变。</span><br><span class="line">例如：</span><br><span class="line">list1 = [1,2,3,[<span class="string">'one'</span>,<span class="string">'four'</span>]],5]</span><br><span class="line">list2 = list1.copy()</span><br><span class="line"><span class="built_in">print</span>(<span class="string">'初始化list1的内容&#123;&#125;'</span>.format(list1))</span><br><span class="line"><span class="built_in">print</span>(<span class="string">'初始化list2的内容&#123;&#125;'</span>.format(list2))</span><br><span class="line">list1[3][0] = <span class="string">'two'</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">'改变后list1的内容&#123;&#125;'</span>.format(list1))</span><br><span class="line"><span class="built_in">print</span>(<span class="string">'改变后list2的内容&#123;&#125;'</span>.format(list2))</span><br><span class="line">结果：</span><br><span class="line">SyntaxError: invalid syntax</span><br><span class="line">PS D:\pythoncode&gt; &amp; python d:/pythoncode/lesson11.py</span><br><span class="line">初始化list1的内容[1, 2, 3, [<span class="string">'one'</span>, <span class="string">'four'</span>], 5]</span><br><span class="line">初始化list2的内容[1, 2, 3, [<span class="string">'one'</span>, <span class="string">'four'</span>], 5]</span><br><span class="line">改变后list1的内容[1, 2, 3, [<span class="string">'two'</span>, <span class="string">'four'</span>], 5]</span><br><span class="line">改变后list2的内容[1, 2, 3, [<span class="string">'two'</span>, <span class="string">'four'</span>], 5]</span><br><span class="line">PS D:\pythoncode&gt;</span><br><span class="line">观察其结果，list1的列表值改变，list2也随之改变。</span><br></pre></td></tr></table></figure></p>
+<p>总结：这种现象我们成为浅拷贝，copy()函数进行组合数据类型拷贝时，只能控制第一层元素进行值传递，一旦出现潜逃的子列表、子字典等内容，将不再拷贝其内容的值，而是直接将这个嵌套的内存地址赋值给list2。所以会造成一旦原列表改变子列表内容后，目标列表中对应的子列表也会发生变化。</p>
+<p>（2）深拷贝：<br>我们需要一如copy这个模块，调用deepcopy()函数，写法如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">import copy</span><br><span class="line">list1 = [1,2,3,[&apos;one&apos;,&apos;four&apos;],5]</span><br><span class="line">list2 = copy.deepcopy(list1)</span><br><span class="line">print(&apos;初始化list1的内容&#123;&#125;&apos;.format(list1))</span><br><span class="line">print(&apos;初始化list2的内容&#123;&#125;&apos;.format(list2))</span><br><span class="line">list1[3][0] = &apos;two&apos;</span><br><span class="line">print(&apos;改变后list1的内容&#123;&#125;&apos;.format(list1))</span><br><span class="line">print(&apos;改变后list2的内容&#123;&#125;&apos;.format(list2))</span><br><span class="line">结果：</span><br><span class="line">PS D:\pythoncode&gt; &amp; python d:/pythoncode/lesson11.py</span><br><span class="line">初始化list1的内容[1, 2, 3, [&apos;one&apos;, &apos;four&apos;], 5]</span><br><span class="line">初始化list2的内容[1, 2, 3, [&apos;one&apos;, &apos;four&apos;], 5]</span><br><span class="line">改变后list1的内容[1, 2, 3, [&apos;two&apos;, &apos;four&apos;], 5]</span><br><span class="line">改变后list2的内容[1, 2, 3, [&apos;one&apos;, &apos;four&apos;], 5]</span><br></pre></td></tr></table></figure></p>
+<p>观察其结果，list1的列表值改变，list2并没有随之改变，那么也就意味着，deepcopy()将list1中内容，包括嵌套里的元素都进行了副本赋值给list2，因此，它们是值相同，并没有指向同一个内存地址。</p>
+<p>2、sort（）与sorted（）<br>（1）sort（）函数提供排序功能，同时该排序是实现了永久性排序，即会改变原有列表的元素位置。（list.sort（））<br>（2）sorted（）函数提供排序功能，同时该排序是实现了临时性排序，即只是产生一个有序结果，并不会真正改变原列表中元素的位置。（sorted（list））</p>
 
       
 
@@ -533,6 +745,135 @@
 
 
   
+    <article id="post-python_" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/07/14/python_/">Python基础</a>
+    </h1>
+  
+
+        
+        <a href="/2018/07/14/python_/" class="archive-article-date">
+  	<time datetime="2018-07-14T09:57:11.020Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-14</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>欢迎大家来到我的技术博客</p>
+<h2 id="P基础语法"><a href="#P基础语法" class="headerlink" title="P基础语法"></a>P基础语法</h2><p>###1、编码：<br>在开发过程，对应不同的语言使用不同的字符编码。<br>英文    ISO-8859-1<br>中文    gbk或gb2312<br>目前Python为了统一编码格式，在3.0以上的版本使用了utf-8编码</p>
+<p>###2、print()函数<br>语法格式：print(value,…,sep=’ ‘,end=’\n’)<br>其中，value代表我们要输出的内容，可以是字符串，可以是数值等内容<br>sep代表输出多个值之间的间隔符，默认使用空格隔开。我们可以重新定义间隔符，比如采用：#、，等<br>end代表输出语句的结束标识，默认使用了换行，我们可以重新定义其他内容，其输出的内容将不再进行换行操作。</p>
+<p>###3、print()函数的基本使用<br>print()常用输出方式：<br>print(‘hello ‘)、print(123456)等<br>参数格式输出<br>%s：代表了字符串内容，其中<br>print(‘welcome %s’%Beijing)=&gt;welcome Beijing<br>print(‘welcome %10.3s’%Beijing)=&gt;welcome       Bei,输出结果为10个字符其中包含字符串Beijing中前三个，其余用空格填充<br>%d：代表了整数内容，其中<br>print(‘price %d’%10)=&gt;price 10<br>print(‘price %d’%10.5) =&gt; price 10<br>print(‘price %3d’%10000)=&gt; price 10000<br>注意这里面的3d表示输出一个宽度为3个单元的数值，如果数值长度小于三，那么数值靠右对齐。<br>-3d表示，数值反向对齐（靠左对齐）<br>%f：代表了浮点数内容(注意，在Python中浮点数是一个近似值，所以结果也是近似)<br>print(‘price %f’%10.2)=&gt;10.200000<br>print(‘price %.1f’%10.2) =&gt; 10.2<br>print(‘prince %.1f’%10.58) = &gt;10.6 当取一位小数位的时候，将小数位第二位进行舍入操作，但是Python的中间值不是5，导致当小数位第二位是5时，直接被舍去<br>print(‘%5.1f’%10.3) =&gt; 10.3<br>输出一个宽度为5的单位，其中整数3位，小数部分1位，小数点占一位</p>
+<p>###4、格式化输出<br>在Python3.0之后，推荐使用{0}来代替前期的%d,%s,%f等一系列的格式化参数，采用了字符串的format函数进行处理。写法如下：<br>print(‘welcome {0}同学，加入{1}班级’.format(‘tom’,’Python3班’))<br>其中{0}，{1}分别映射format()中的’tom’和’Python3班’，如果前面占位符中的索引值变化，那么他们映射的值也随之变化</p>
+<p>###5、变量<br>1）变量的声明：在Python没有变量类型，直接进行变量的声明，比如：i = 10<br>2)变量的赋值：在python中，有两种赋值方式<br>第一种，单个变量赋值  name = ‘tom’<br>第二种，多个变量同时赋值  name, age, sex = ‘tom’， 23， ‘男’</p>
+<p>变量在内存中的存在情况<br>1）python中的变量，在声明和赋值时，不仅声明了变量的名字同时还为这个变量指向了内存中的地址，该地址用来存储变量的值。<br>2）python中整数、字符串、浮点数等其本身都属于常量，所以当赋值给一个变量时，如：<br>i = 10意味着将10这个常量在内存中的地址指向，因此，i = 10 ，j = 10 使用id(i),id(j）我们法向他们的id是相同的。<br>因为，他们的值10在内存中的地址时相同的。<br>3）变量与内存地址<br>当我们声明一个变量时，对其进行赋值。实际上就是将变量值所在的内存地址，赋值给该变量。也就是说这个变量指向其值所在的内存地址。<br>当我们改变变量的值的时候，说白了就是将变量指向的内存地址进行变化。<br>举例：我们日常购买商品，快递员通过你的邮寄地址将快递送到你本人手里。可以理解为，快递员拥有指向你这个变量的地址，通过地址，将快递商品赋值给你。<br>4）变量与常量<br>变量：我们认为其内容是临时结果，可变的。供后续的程序代码进行调用。<br>常量：我们认为其内容是不变的，或者在程序运行的过程中也不发生改变。<br>在Python中，我们通过大写变量名，来表明这是一个常量，比如：CARDID = ‘12048377293’<br>5)变量命名规则<br>首先，Python中的变量命名，必须由字母、数字或下划线三者组成，不能有其他的字符出现<br>其次，变量名的首个字符，必须是字母或下划线<br>然后，Python中的关键字不能作为变量名来使用，常用的关键字诸如：if,for,is,none等等。<br>Python是严格区分大小写的语言，其中A = 10 ，a = 10。我们认为这是两个不同的变量</p>
+<p>###6、基本数据类型<br>1）常见的数据类型：<br>整型<br>浮点型<br>布尔型<br>复数型<br>字符串型<br>我们工作中常用到整型、字符串<br>2）整型<br>我们通常根据计算机中数据编码格式，将整型分为：二进制、八进制、十进制、十六进制四种类型。<br>进制间的转换<br>二进制转十进制：bin(int)=&gt;将十进制转为二进制   int(bin)=&gt;将二进制转为十进制<br>八进制转十进制：oct(int)=&gt;将十进制转为八进制   int(oct)=&gt;将八进制转为十进制<br>十六进制转十进制： hex(int)=&gt;将十进制转为十六进制，int(hex)=&gt;将十六进制转为十进制</p>
+<p>3）运算符<br>第一，算术运算符：+、-、<em>、/<br>在python中默认的数据类型时浮点型，因此在执行算术运算时5/2=2.5，而不是2.<br>%：两数进行求余运算，如果分子大于分母，得余数；如果分子小于分母，直接得分子。注意：只有分子除尽分母时，结果才返回0<br>//：两数相除取整数，注意，此处得到的整数，为结果的整数部分不进行四舍五入操作。<br><strong>：A</strong>B 数A连续相乘B次，也可以说数A 的B次幂<br>补充：<br>1、对于数值运算的四舍五入操作<br>math包中的floor()和ceil()函数<br>import math<br>math.floor(3/2) =&gt;1   等同于 3//2    只舍不入<br>math.ceil(3/2) =&gt;2    此处，只要有小数位就进位，不管小数部分是否大于等于5  只入不舍<br>round()函数进行四舍五入操作，round(数值[,保留小数位数])<br>round(1.5)=&gt;2<br>round(1.2)=&gt;1<br>round(1,4,1)=&gt;1.4  意味着保留小数点后一位<br>2、求幂运算<br>pow(2,3) =&gt;8 等同于2**3<br>3、求绝对值<br>abs(-10) =&gt; 10<br>4、求两数相除的商与余数<br>divmod(5,3) =&gt;(1,2)    类似5%3=&gt;2<br>5、运算符<br>i = 10<br>i = i + 5  等同于  i+=5<br>i = i - 5  等同于  i-=5<br>i = i </em> 5  等同于  i*=5<br>i = i / 5  等同于  i/=5<br>i = i//5   等同于  i//=5<br>i = i <strong> 2 等同于  i</strong>=2<br>i = i % 3  等同于  i%=3</p>
+<p>4)布尔型<br>1、python中布尔型分为True和False两种，但是在实际操作中我们也可以将其与1和0等同。<br>2、布尔型常用在逻辑运算和判断条件中，作为结果来使用。但是也可以参与算术运算，当进行算术运算时，True作为1、False作为0参与运算。<br>3、a = True     a + 1 =&gt; 2<br>b = False b + 1 =&gt;1<br>a + b =&gt; 1<br>注意：通常我们在python，不能将布尔型参与算术运算的。布尔型一般参加比较运算或逻辑运算，其返回值还是布尔型。<br>布尔型求非： not<br>not a =&gt; False<br>not b =&gt; True</p>
+<p>5)精确的十进制<br>在python中，我们通过阅读官方文档了解到，浮点数是一种近似值的表示，因此直接使用浮点数时常常出现精度丢失或不匹配情况发生。<br>python中提出了Decimal对象来进行解决，通过引入 import decimal生成一个decimal对象，将浮点数转换为decimal类型，可以支持完成对应的算术运算。例如：</p>
+<p>from decimal import Decimal   # 引入decimal包中的Deciaml对象<br>f1 = 12.4556<br>f2 = 24.3<br>c = Decimal.from_float(f1)    # 将浮点数转换为decimal对象<br>a = Decimal(f1).quantize(Decimal(‘0.00’)) #将浮点数转换为decimal对象，同时指定该数值的精度，保留小数点后两位，并自动完成四舍五入。<br>b = Decimal(f2).quantize(Decimal(‘0.00’))<br>print((a*b).quantize(Decimal(‘0.00’)))</p>
+<p>6）字符串<br>1、字符串声明，可以使用’’也可以使用””，他们都可以表示字符串内容。<br>2、比较运算符：&gt;、&lt;、==、!=、&gt;=、&lt;=<br>他们的返回值为布尔型，即True或False<br>字符串进行比较时，采用对应位置的逐字母进行比较，首先将字母转成ASCII码，然后根据码值进行比较大小。如果一旦出现一方的字母码值大于另一方，就结束比较。<br>提示：在键盘上，所有的字符的ASCII码值都小于a,b,c…..这些字母的码值<br>只有这四个字符的ASCII码值大于字母z的码值：’{‘、’|’、’}’、’~’，它们的码值从123-126<br>3、我们使用input()，允许进行交互式输入，默认input()输入的值类型为str字符串类型。<br>4、字符串常用的方法<br>1）find() 查找<br>函数格式：str.find(子字符串[,开始索引位，结束索引位])<br>返回值：如果查找成功，则返回所查找内容在字符串中的索引位置，如果没有找到，返回-1.<br>注意：如果所查找的内容中，有多个相同的字母，只会返回第一个字母所在的索引位。比如：<br>str1 = ‘hello’<br>str1.find(‘ll’) =&gt; 2  该例中，’ll’在字符串中出现了两次，但只会返回第一次出现的索引位置。<br>为什么查找时，没有找到目标字符串的情况下会返回-1。其实，在find操作中，会对字符串进行扫描从字符串的索引位0开始，一直到字符串结尾，如果在字符串最后一位没有找到匹配的内容，将指向字符串结束符(EOF)，该结束符为-1。所以找不到时，find返回值为-1.<br>更多用法：<br>string1 = ‘apple,banana,apple,apple’</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>string1.find(‘apple’)<br>0<br>string1.find(‘apple’,5)<br>13<br>string1.find(‘apple’,7,20)<br>13<br>string1.find(‘apple’,14,20)<br>-1<br>string1.find(‘apple’,14,24)<br>19</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>对比：<br>index() 返回指定字符的索引位<br>函数格式：index(子字符串[,开始索引位，结束索引位])<br>返回值：如果找到指定的字符串，则返回其索引位；如果找不到就报错ValueError</p>
+<p>find()与index()函数的区别<br>第一，两者在执行结果时类似的，如果找到指定的字符就会返回其索引位<br>第二，find()如果找不到指定的字符时，返回-1；而index()找不到指定的字符，raise ValueError.<br>第三，从效率上来讲，index的查询速度要优于find,因为在python中对于像字符串这样的有序数据类型，会产生一个索引对象来自动维护其序列，find()函数不管是否有这样的序列，都需要在字符串本身进行逐一查找，而index()会通过这个索引对象的映射方式，来快速找到对应的索引位。<br>2）split() 拆分字符串<br>函数格式：str.split([分隔符])<br>返回值：根据指定的分隔符，对字符串进行拆分，返回一个列表；如果不指定分隔符，那么会将整个字符串，作为列表的一个元素。例如：<br>string1 = ‘tv,pc,notebook,phone’</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>string1.split(‘,’)<br>[‘tv’, ‘pc’, ‘notebook’, ‘phone’]<br>string1.split()<br>[‘tv,pc,notebook,phone’]<br>注意：split中的分隔符，我们根据字符串中的实际情况而定。如果使用了不正确的分隔符，str.split(‘错误分隔符’)操作结果str.split(),会将整个字符串作为列表的一个元素。<br>3）strip() 字符串左右两端去除指定字符（默认情况，去除空格）<br>函数格式：str.strip([指定字符])<br>返回值：根据指定的字符，对字符串进行两端去除其内容，返回一个新的字符串。如果字符串中间有空格或指定字符，那么该函数不起作用。如果指定的字符在字符串左右两端不存在，那么将返回字符串本身。<br>例如：<br>缺省情况<br>string1 = ‘  hello world  ‘<br>string1.strip()<br>‘hello world’<br>print(string1)<br>  hello world  </p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>指定字符<br>string1 = ‘awelcom to zhengzhoua’</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>string1.strip(‘a’)<br>‘welcom to zhengzhou’<br>注意：<br>1）字符串类型，一旦被声明赋值后，其内容是不可被改变的，如果需要改变原字符串变量的值，必须对其进行重新赋值。<br>2）如果指定字符内容为一个字符序列，那么意味着使用strip去除左右两端指定字符时，只要符合字符序列中的某一位，就进行去除<br>string1 = ‘ awelcom to zhengzhouab’<br>string1.strip(‘ ab’)<br>‘welcom to zhengzhou’</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>4）replace()替换函数<br>函数格式：str.replace(old,new[,max])<br>返回值：将指定字符串（old）替换为新字符串（new）,最大可以替换max次。替换完成后，返回一个新字符串。<br>注意：此处的max参数，主要用来指定替换的次数，如果该参数缺省，表示替换里面所有符合条件的字符串。<br>例如：<br>string1 = ‘honor,oppo,vivo,apple,oppo,oppo’</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>old_str = ‘oppo’<br>new_str = ‘xiaomi’<br>string1.replace(old_str, new_str)     # 替换所有的oppo<br>‘honor,xiaomi,vivo,apple,xiaomi,xiaomi’<br>string1.replace(old_str, new_str,2)   #替换指定次数，即两处oppo<br>‘honor,xiaomi,vivo,apple,xiaomi,oppo’</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>5）isalnum()、isalpha()、isdigit()<br>函数格式：str.isalnum()    判断字符串内容，是否有数字或字母组成<br>          str.isalpha()    判断字符串内容，是否由字母组成<br>          str.isdigit()    判断字符串内容，是否由数字组成<br>返回值：如果符合条件，返回True；如果不符合，返回False。</p>
+<p>6）[] 字符串运算符<br>使用方法：str[索引位] =&gt; 返回指定索引位的字符，<br>索引位有两种表示方式：<br>string1 = hello world<br>第一种：string1[0] =&gt; h    到string1[10] =&gt; d<br>第二种：string1[-1] =&gt; d   到string1[-11] =&gt; h<br>切片操作:<br>格式：str[start,end,step]<br>start：代表切片开始的索引位<br>end: 代表切片结束的索引位（但是不会输出该索引位指向的字符）<br>step：代表每隔次几个字符个数截取一个</p>
+<p>string1 = hello world<br>string1[0:3] =&gt; hel   从索引位为0的字符开始，到索引位3结束，但不包括索引位3所指向的字符。<br>string1[2:4] =&gt; ll<br>string1[0:-1] =&gt; hello worl<br>string1[0:8:2] =&gt; hlow</p>
+<p>str1[:]  =&gt; ‘hello world’ 等于将字符串进行复制<br>str1[:5] =&gt; ‘hello’       如果没有标明开始索引位，默认从0开始<br>str1[::] =&gt; ‘hello world’  等同于str1[:]</p>
+<p>使用步长，实现字符串反转<br>string1[-1::-1]  =&gt;dlrow olleh    从索引位-1开始，一直到字符串结束，反向输出字符<br>但是下列操作，会返回一个空字符串：<br>string1[-1:4]  =&gt; ‘’<br>string1[-1:-5] =&gt; ‘’</p>
+<p>7）连接符与重复操作符<br>+：在字符串中使用时，作为连接两个字符串，并返回一个新字符串的作用来使用。<br><em>：重复操作指定的次数，即将字符串重复输出N次。返回一个新字符串。<br>注意：在重复操作中，必须遵循：字符串</em>正整数这样的格式，如果数值不是正整数，其结果返回一个空字符串，如果不是数值类型，程序报错。<br>8）in运算符<br>用来检测指定的内容，是否在字符串中，如果存在则返回True，反之返回False<br>例如:<br>string1 = ‘hello world’</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>substr = ‘e’<br>substr in string1<br>True<br>substr = ‘ll’<br>substr in string1<br>True<br>substr = ‘wr’<br>substr in string1<br>False</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>7、控制语句<br>1）条件语句<br>单判断：<br>if 条件:<br>   代码<br>双分支：<br>if 条件：<br>   代码<br>else:<br>   代码<br>多分支：<br>if 条件：<br>   代码<br>elif 条件：<br>   代码<br>elif 条件：<br>   代码<br>…<br>else:<br>   代码</p>
+<p>2）逻辑运算符： and、or、not<br>and:左右两端都是布尔型，其结果也为布尔型。当左右两端的值都为True，其结果才为True，有一方为False，其结果一定为False。<br>or:左右两端都是布尔型，其结果也为布尔型。当左右两端的值有一方为True时，其结果就为True，只有在双方都为False时，其结果才为False。<br>not：属于单目运算，其结果也是布尔型。其作用就是求反，如果变量为True，结果为False，如果为False，其结果为True。<br>逻辑运算、比较运算常用在条件中使用。同时，这两种运算符经常配合使用。</p>
+<p>3）循环控制语句<br>for循环<br>第一种：（推荐）<br>for 变量 in 集合：<br>    代码<br>说明：这种循环方式，我们称为快速迭代循环，能够对集合数据进行遍历。<br>注意：这种方式只能用在集合数据上，比如：字符串、列表、元组、字典等内容。<br>例如：<br>string1 = ‘hello world’<br>for item in string1:<br>    print(item)<br>h<br>e<br>l<br>l<br>o</p>
+<p>w<br>o<br>r<br>l<br>d<br>第二种：传统式，配合range()函数使用。通过range()函数指定了循环的范围。<br>for i range(循环次数):<br>    代码</p>
+<p>说明：这种循环方式，采用指定循环次数，对目标集合进行遍历。其做法主要是让循环与集合的下标同步，在循环次数时一同取出集合指定下标的对应值。<br>range()函数：<br>函数格式：<br>range(stop) :缺省情况下，表示从0开始，循环n次<br>range(star,stop[,step])<br>其中，star：循环开始的值，stop：循环次数，step：循环步长。注意此处循环，会根据stop中的值循环规定的次数，但是显示时会从start位置开始。<br>例如：<br>for i in range(3,10):<br>    print(i,end=’ ‘)<br>3 4 5 6 7 8 9<br>for i in range(5,10):<br>    print(i,end=’ ‘)<br>5 6 7 8 9<br>range(1,10)  </p>
+<p>for循环的常用方式：嵌套<br>for i in range(次数):</p>
+<pre><code>for j in range(次数):
+</code></pre><p>注意：在这种嵌套表示的过程中，变量的位置尤为重要，通用原则为：如果变量的值需要通过外层循环来获取或生成，那么我们可以将其设为全局变量，即与外层循环for同等级的变量，如果变量需要在内层循环中生成或获取，我们通常会在外循环中声明，即与内循环同级。<br>while循环<br>格式：while 条件：<br>           代码</p>
+<p>break与continue<br>break：当满足指定条件时，break表示中断（中止）此循环，如果循环外部还有其他代码则继续向下执行。<br>continue：当满足指定条件时，continue表示结束本次循环，开始下一次循环。注意continue并没有退出循环。<br>同时，这两个关键字都是必须配合循环语句来使用，不能单独用在其他地方，比如：if</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/07/14/python_/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-python_2" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -689,276 +1030,10 @@
 
 
   
-    <article id="post-python_4" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/07/13/python_4/">Python基础-控制语句</a>
-    </h1>
-  
-
-        
-        <a href="/2018/07/13/python_4/" class="archive-article-date">
-  	<time datetime="2018-07-13T05:10:51.461Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-13</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="控制语句"><a href="#控制语句" class="headerlink" title="控制语句"></a>控制语句</h2><h3 id="1）条件语句"><a href="#1）条件语句" class="headerlink" title="1）条件语句"></a>1）条件语句</h3><p>单判断：<br>if 条件:<br>   代码</p>
-<p>双分支：<br>if 条件：<br>   代码<br>else:<br>   代码</p>
-<p>多分支：<br>if 条件：<br>   代码<br>elif 条件：<br>   代码<br>elif 条件：<br>   代码<br>…<br>else:<br>   代码</p>
-<p>2）逻辑运算符： and、or、not<br>and:左右两端都是布尔型，其结果也为布尔型。当左右两端的值都为True，其结果才为True，有一方为False，其结果一定为False。<br>or:左右两端都是布尔型，其结果也为布尔型。当左右两端的值有一方为True时，其结果就为True，只有在双方都为False时，其结果才为False。<br>not：属于单目运算，其结果也是布尔型。其作用就是求反，如果变量为True，结果为False，如果为False，其结果为True。<br>逻辑运算、比较运算常用在条件中使用。同时，这两种运算符经常配合使用。</p>
-<p>3）循环控制语句<br>for循环<br>第一种：（推荐）<br>for 变量 in 集合：<br>    代码<br>说明：这种循环方式，我们称为快速迭代循环，能够对集合数据进行遍历。<br>注意：这种方式只能用在集合数据上，比如：字符串、列表、元组、字典等内容。<br>例如：<br>string1 = ‘hello world’<br>for item in string1:<br>    print(item)<br>h<br>e<br>l<br>l<br>o</p>
-<p>w<br>o<br>r<br>l<br>d<br>第二种：传统式，配合range()函数使用。通过range()函数指定了循环的范围。<br>for i range(循环次数):<br>    代码</p>
-<p>说明：这种循环方式，采用指定循环次数，对目标集合进行遍历。其做法主要是让循环与集合的下标同步，在循环次数时一同取出集合指定下标的对应值。<br>range()函数：<br>函数格式：<br>range(stop) :缺省情况下，表示从0开始，循环n次<br>range(star,stop[,step])<br>其中，star：循环开始的值，stop：循环次数，step：循环步长。注意此处循环，会根据stop中的值循环规定的次数，但是显示时会从start位置开始。<br>例如：<br>for i in range(3,10):<br>    print(i,end=’ ‘)<br>3 4 5 6 7 8 9<br>for i in range(5,10):<br>    print(i,end=’ ‘)<br>5 6 7 8 9<br>range(1,10)  </p>
-<p>for循环的常用方式：嵌套<br>for i in range(次数):</p>
-<pre><code>for j in range(次数):
-</code></pre><p>注意：在这种嵌套表示的过程中，变量的位置尤为重要，通用原则为：如果变量的值需要通过外层循环来获取或生成，那么我们可以将其设为全局变量，即与外层循环for同等级的变量，如果变量需要在内层循环中生成或获取，我们通常会在外循环中声明，即与内循环同级。<br>while循环<br>格式：while 条件：<br>           代码</p>
-<p>break与continue<br>break：当满足指定条件时，break表示中断（中止）此循环，如果循环外部还有其他代码则继续向下执行。<br>continue：当满足指定条件时，continue表示结束本次循环，开始下一次循环。注意continue并没有退出循环。<br>同时，这两个关键字都是必须配合循环语句来使用，不能单独用在其他地方，比如：if</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/07/13/python_4/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-python_1" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/07/12/python_1/">Python基础-入门</a>
-    </h1>
-  
-
-        
-        <a href="/2018/07/12/python_1/" class="archive-article-date">
-  	<time datetime="2018-07-12T00:51:34.226Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-12</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>欢迎大家来到我的技术博客</p>
-<h2 id="P基础语法"><a href="#P基础语法" class="headerlink" title="P基础语法"></a>P基础语法</h2><p>1、编码：<br>在开发过程，对应不同的语言使用不同的字符编码。<br>英文    ISO-8859-1<br>中文    gbk或gb2312<br>目前Python为了统一编码格式，在3.0以上的版本使用了utf-8编码<br>2、print()函数<br>语法格式：print(value,…,sep=’ ‘,end=’\n’)<br>其中，value代表我们要输出的内容，可以是字符串，可以是数值等内容<br>sep代表输出多个值之间的间隔符，默认使用空格隔开。我们可以重新定义间隔符，比如采用：#、，等<br>end代表输出语句的结束标识，默认使用了换行，我们可以重新定义其他内容，其输出的内容将不再进行换行操作。<br>3、print()函数的基本使用<br>print()常用输出方式：<br>print(‘hello ‘)、print(123456)等<br>参数格式输出<br>%s：代表了字符串内容，其中<br>print(‘welcome %s’%Beijing)=&gt;welcome Beijing<br>print(‘welcome %10.3s’%Beijing)=&gt;welcome       Bei,输出结果为10个字符其中包含字符串Beijing中前三个，其余用空格填充<br>%d：代表了整数内容，其中<br>print(‘price %d’%10)=&gt;price 10<br>print(‘price %d’%10.5) =&gt; price 10<br>print(‘price %3d’%10000)=&gt; price 10000<br>注意这里面的3d表示输出一个宽度为3个单元的数值，如果数值长度小于三，那么数值靠右对齐。<br>-3d表示，数值反向对齐（靠左对齐）<br>%f：代表了浮点数内容(注意，在Python中浮点数是一个近似值，所以结果也是近似)<br>print(‘price %f’%10.2)=&gt;10.200000<br>print(‘price %.1f’%10.2) =&gt; 10.2<br>print(‘prince %.1f’%10.58) = &gt;10.6 当取一位小数位的时候，将小数位第二位进行舍入操作，但是Python的中间值不是5，导致当小数位第二位是5时，直接被舍去<br>print(‘%5.1f’%10.3) =&gt; 10.3<br>输出一个宽度为5的单位，其中整数3位，小数部分1位，小数点占一位<br>4、格式化输出<br>在Python3.0之后，推荐使用{0}来代替前期的%d,%s,%f等一系列的格式化参数，采用了字符串的format函数进行处理。写法如下：<br>print(‘welcome {0}同学，加入{1}班级’.format(‘tom’,’Python3班’))<br>其中{0}，{1}分别映射format()中的’tom’和’Python3班’，如果前面占位符中的索引值变化，那么他们映射的值也随之变化</p>
-<p>5、变量<br>1）变量的声明：在Python没有变量类型，直接进行变量的声明，比如：i = 10<br>2)变量的赋值：在python中，有两种赋值方式<br>第一种，单个变量赋值  name = ‘tom’<br>第二种，多个变量同时赋值  name, age, sex = ‘tom’， 23， ‘男’</p>
-<p>变量在内存中的存在情况<br>1）python中的变量，在声明和赋值时，不仅声明了变量的名字同时还为这个变量指向了内存中的地址，该地址用来存储变量的值。<br>2）python中整数、字符串、浮点数等其本身都属于常量，所以当赋值给一个变量时，如：<br>i = 10意味着将10这个常量在内存中的地址指向，因此，i = 10 ，j = 10 使用id(i),id(j）我们法向他们的id是相同的。<br>因为，他们的值10在内存中的地址时相同的。<br>3）变量与内存地址<br>当我们声明一个变量时，对其进行赋值。实际上就是将变量值所在的内存地址，赋值给该变量。也就是说这个变量指向其值所在的内存地址。<br>当我们改变变量的值的时候，说白了就是将变量指向的内存地址进行变化。<br>举例：我们日常购买商品，快递员通过你的邮寄地址将快递送到你本人手里。可以理解为，快递员拥有指向你这个变量的地址，通过地址，将快递商品赋值给你。<br>4）变量与常量<br>变量：我们认为其内容是临时结果，可变的。供后续的程序代码进行调用。<br>常量：我们认为其内容是不变的，或者在程序运行的过程中也不发生改变。<br>在Python中，我们通过大写变量名，来表明这是一个常量，比如：CARDID = ‘12048377293’<br>5)变量命名规则<br>首先，Python中的变量命名，必须由字母、数字或下划线三者组成，不能有其他的字符出现<br>其次，变量名的首个字符，必须是字母或下划线<br>然后，Python中的关键字不能作为变量名来使用，常用的关键字诸如：if,for,is,none等等。<br>Python是严格区分大小写的语言，其中A = 10 ，a = 10。我们认为这是两个不同的变量</p>
-<p>6、基本数据类型<br>1）常见的数据类型：<br>整型<br>浮点型<br>布尔型<br>复数型<br>字符串型<br>我们工作中常用到整型、字符串<br>2）整型<br>我们通常根据计算机中数据编码格式，将整型分为：二进制、八进制、十进制、十六进制四种类型。<br>进制间的转换<br>二进制转十进制：bin(int)=&gt;将十进制转为二进制   int(bin)=&gt;将二进制转为十进制<br>八进制转十进制：oct(int)=&gt;将十进制转为八进制   int(oct)=&gt;将八进制转为十进制<br>十六进制转十进制： hex(int)=&gt;将十进制转为十六进制，int(hex)=&gt;将十六进制转为十进制</p>
-<p>3）运算符<br>第一，算术运算符：+、-、<em>、/<br>在python中默认的数据类型时浮点型，因此在执行算术运算时5/2=2.5，而不是2.<br>%：两数进行求余运算，如果分子大于分母，得余数；如果分子小于分母，直接得分子。注意：只有分子除尽分母时，结果才返回0<br>//：两数相除取整数，注意，此处得到的整数，为结果的整数部分不进行四舍五入操作。<br><strong>：A</strong>B 数A连续相乘B次，也可以说数A 的B次幂<br>补充：<br>1、对于数值运算的四舍五入操作<br>math包中的floor()和ceil()函数<br>import math<br>math.floor(3/2) =&gt;1   等同于 3//2    只舍不入<br>math.ceil(3/2) =&gt;2    此处，只要有小数位就进位，不管小数部分是否大于等于5  只入不舍<br>round()函数进行四舍五入操作，round(数值[,保留小数位数])<br>round(1.5)=&gt;2<br>round(1.2)=&gt;1<br>round(1,4,1)=&gt;1.4  意味着保留小数点后一位<br>2、求幂运算<br>pow(2,3) =&gt;8 等同于2**3<br>3、求绝对值<br>abs(-10) =&gt; 10<br>4、求两数相除的商与余数<br>divmod(5,3) =&gt;(1,2)    类似5%3=&gt;2<br>5、运算符<br>i = 10<br>i = i + 5  等同于  i+=5<br>i = i - 5  等同于  i-=5<br>i = i </em> 5  等同于  i*=5<br>i = i / 5  等同于  i/=5<br>i = i//5   等同于  i//=5<br>i = i <strong> 2 等同于  i</strong>=2<br>i = i % 3  等同于  i%=3</p>
-<p>4)布尔型<br>1、python中布尔型分为True和False两种，但是在实际操作中我们也可以将其与1和0等同。<br>2、布尔型常用在逻辑运算和判断条件中，作为结果来使用。但是也可以参与算术运算，当进行算术运算时，True作为1、False作为0参与运算。<br>3、a = True     a + 1 =&gt; 2<br>b = False b + 1 =&gt;1<br>a + b =&gt; 1<br>注意：通常我们在python，不能将布尔型参与算术运算的。布尔型一般参加比较运算或逻辑运算，其返回值还是布尔型。<br>布尔型求非： not<br>not a =&gt; False<br>not b =&gt; True</p>
-<p>5)精确的十进制<br>在python中，我们通过阅读官方文档了解到，浮点数是一种近似值的表示，因此直接使用浮点数时常常出现精度丢失或不匹配情况发生。<br>python中提出了Decimal对象来进行解决，通过引入 import decimal生成一个decimal对象，将浮点数转换为decimal类型，可以支持完成对应的算术运算。例如：</p>
-<p>from decimal import Decimal   # 引入decimal包中的Deciaml对象<br>f1 = 12.4556<br>f2 = 24.3<br>c = Decimal.from_float(f1)    # 将浮点数转换为decimal对象<br>a = Decimal(f1).quantize(Decimal(‘0.00’)) #将浮点数转换为decimal对象，同时指定该数值的精度，保留小数点后两位，并自动完成四舍五入。<br>b = Decimal(f2).quantize(Decimal(‘0.00’))<br>print((a*b).quantize(Decimal(‘0.00’)))</p>
-<p>6）字符串<br>1、字符串声明，可以使用’’也可以使用””，他们都可以表示字符串内容。<br>2、比较运算符：&gt;、&lt;、==、!=、&gt;=、&lt;=<br>他们的返回值为布尔型，即True或False<br>字符串进行比较时，采用对应位置的逐字母进行比较，首先将字母转成ASCII码，然后根据码值进行比较大小。如果一旦出现一方的字母码值大于另一方，就结束比较。<br>提示：在键盘上，所有的字符的ASCII码值都小于a,b,c…..这些字母的码值<br>只有这四个字符的ASCII码值大于字母z的码值：’{‘、’|’、’}’、’~’，它们的码值从123-126<br>3、我们使用input()，允许进行交互式输入，默认input()输入的值类型为str字符串类型。<br>4、字符串常用的方法<br>1）find() 查找<br>函数格式：str.find(子字符串[,开始索引位，结束索引位])<br>返回值：如果查找成功，则返回所查找内容在字符串中的索引位置，如果没有找到，返回-1.<br>注意：如果所查找的内容中，有多个相同的字母，只会返回第一个字母所在的索引位。比如：<br>str1 = ‘hello’<br>str1.find(‘ll’) =&gt; 2  该例中，’ll’在字符串中出现了两次，但只会返回第一次出现的索引位置。<br>为什么查找时，没有找到目标字符串的情况下会返回-1。其实，在find操作中，会对字符串进行扫描从字符串的索引位0开始，一直到字符串结尾，如果在字符串最后一位没有找到匹配的内容，将指向字符串结束符(EOF)，该结束符为-1。所以找不到时，find返回值为-1.<br>更多用法：<br>string1 = ‘apple,banana,apple,apple’</p>
-<blockquote>
-<blockquote>
-<blockquote>
-<p>string1.find(‘apple’)<br>0<br>string1.find(‘apple’,5)<br>13<br>string1.find(‘apple’,7,20)<br>13<br>string1.find(‘apple’,14,20)<br>-1<br>string1.find(‘apple’,14,24)<br>19</p>
-</blockquote>
-</blockquote>
-</blockquote>
-<p>对比：<br>index() 返回指定字符的索引位<br>函数格式：index(子字符串[,开始索引位，结束索引位])<br>返回值：如果找到指定的字符串，则返回其索引位；如果找不到就报错ValueError</p>
-<p>find()与index()函数的区别<br>第一，两者在执行结果时类似的，如果找到指定的字符就会返回其索引位<br>第二，find()如果找不到指定的字符时，返回-1；而index()找不到指定的字符，raise ValueError.<br>第三，从效率上来讲，index的查询速度要优于find,因为在python中对于像字符串这样的有序数据类型，会产生一个索引对象来自动维护其序列，find()函数不管是否有这样的序列，都需要在字符串本身进行逐一查找，而index()会通过这个索引对象的映射方式，来快速找到对应的索引位。<br>2）split() 拆分字符串<br>函数格式：str.split([分隔符])<br>返回值：根据指定的分隔符，对字符串进行拆分，返回一个列表；如果不指定分隔符，那么会将整个字符串，作为列表的一个元素。例如：<br>string1 = ‘tv,pc,notebook,phone’</p>
-<blockquote>
-<blockquote>
-<blockquote>
-<p>string1.split(‘,’)<br>[‘tv’, ‘pc’, ‘notebook’, ‘phone’]<br>string1.split()<br>[‘tv,pc,notebook,phone’]<br>注意：split中的分隔符，我们根据字符串中的实际情况而定。如果使用了不正确的分隔符，str.split(‘错误分隔符’)操作结果str.split(),会将整个字符串作为列表的一个元素。<br>3）strip() 字符串左右两端去除指定字符（默认情况，去除空格）<br>函数格式：str.strip([指定字符])<br>返回值：根据指定的字符，对字符串进行两端去除其内容，返回一个新的字符串。如果字符串中间有空格或指定字符，那么该函数不起作用。如果指定的字符在字符串左右两端不存在，那么将返回字符串本身。<br>例如：<br>缺省情况<br>string1 = ‘  hello world  ‘<br>string1.strip()<br>‘hello world’<br>print(string1)<br>  hello world  </p>
-</blockquote>
-</blockquote>
-</blockquote>
-<p>指定字符<br>string1 = ‘awelcom to zhengzhoua’</p>
-<blockquote>
-<blockquote>
-<blockquote>
-<p>string1.strip(‘a’)<br>‘welcom to zhengzhou’<br>注意：<br>1）字符串类型，一旦被声明赋值后，其内容是不可被改变的，如果需要改变原字符串变量的值，必须对其进行重新赋值。<br>2）如果指定字符内容为一个字符序列，那么意味着使用strip去除左右两端指定字符时，只要符合字符序列中的某一位，就进行去除<br>string1 = ‘ awelcom to zhengzhouab’<br>string1.strip(‘ ab’)<br>‘welcom to zhengzhou’</p>
-</blockquote>
-</blockquote>
-</blockquote>
-<p>4）replace()替换函数<br>函数格式：str.replace(old,new[,max])<br>返回值：将指定字符串（old）替换为新字符串（new）,最大可以替换max次。替换完成后，返回一个新字符串。<br>注意：此处的max参数，主要用来指定替换的次数，如果该参数缺省，表示替换里面所有符合条件的字符串。<br>例如：<br>string1 = ‘honor,oppo,vivo,apple,oppo,oppo’</p>
-<blockquote>
-<blockquote>
-<blockquote>
-<p>old_str = ‘oppo’<br>new_str = ‘xiaomi’<br>string1.replace(old_str, new_str)     # 替换所有的oppo<br>‘honor,xiaomi,vivo,apple,xiaomi,xiaomi’<br>string1.replace(old_str, new_str,2)   #替换指定次数，即两处oppo<br>‘honor,xiaomi,vivo,apple,xiaomi,oppo’</p>
-</blockquote>
-</blockquote>
-</blockquote>
-<p>5）isalnum()、isalpha()、isdigit()<br>函数格式：str.isalnum()    判断字符串内容，是否有数字或字母组成<br>          str.isalpha()    判断字符串内容，是否由字母组成<br>          str.isdigit()    判断字符串内容，是否由数字组成<br>返回值：如果符合条件，返回True；如果不符合，返回False。</p>
-<p>6）[] 字符串运算符<br>使用方法：str[索引位] =&gt; 返回指定索引位的字符，<br>索引位有两种表示方式：<br>string1 = hello world<br>第一种：string1[0] =&gt; h    到string1[10] =&gt; d<br>第二种：string1[-1] =&gt; d   到string1[-11] =&gt; h<br>切片操作:<br>格式：str[start,end,step]<br>start：代表切片开始的索引位<br>end: 代表切片结束的索引位（但是不会输出该索引位指向的字符）<br>step：代表每隔次几个字符个数截取一个</p>
-<p>string1 = hello world<br>string1[0:3] =&gt; hel   从索引位为0的字符开始，到索引位3结束，但不包括索引位3所指向的字符。<br>string1[2:4] =&gt; ll<br>string1[0:-1] =&gt; hello worl<br>string1[0:8:2] =&gt; hlow</p>
-<p>str1[:]  =&gt; ‘hello world’ 等于将字符串进行复制<br>str1[:5] =&gt; ‘hello’       如果没有标明开始索引位，默认从0开始<br>str1[::] =&gt; ‘hello world’  等同于str1[:]</p>
-<p>使用步长，实现字符串反转<br>string1[-1::-1]  =&gt;dlrow olleh    从索引位-1开始，一直到字符串结束，反向输出字符<br>但是下列操作，会返回一个空字符串：<br>string1[-1:4]  =&gt; ‘’<br>string1[-1:-5] =&gt; ‘’</p>
-<p>7）连接符与重复操作符<br>+：在字符串中使用时，作为连接两个字符串，并返回一个新字符串的作用来使用。<br><em>：重复操作指定的次数，即将字符串重复输出N次。返回一个新字符串。<br>注意：在重复操作中，必须遵循：字符串</em>正整数这样的格式，如果数值不是正整数，其结果返回一个空字符串，如果不是数值类型，程序报错。<br>8）in运算符<br>用来检测指定的内容，是否在字符串中，如果存在则返回True，反之返回False<br>例如:<br>string1 = ‘hello world’</p>
-<blockquote>
-<blockquote>
-<blockquote>
-<p>substr = ‘e’<br>substr in string1<br>True<br>substr = ‘ll’<br>substr in string1<br>True<br>substr = ‘wr’<br>substr in string1<br>False</p>
-</blockquote>
-</blockquote>
-</blockquote>
-<p>7、控制语句<br>1）条件语句<br>单判断：<br>if 条件:<br>   代码<br>双分支：<br>if 条件：<br>   代码<br>else:<br>   代码<br>多分支：<br>if 条件：<br>   代码<br>elif 条件：<br>   代码<br>elif 条件：<br>   代码<br>…<br>else:<br>   代码</p>
-<p>2）逻辑运算符： and、or、not<br>and:左右两端都是布尔型，其结果也为布尔型。当左右两端的值都为True，其结果才为True，有一方为False，其结果一定为False。<br>or:左右两端都是布尔型，其结果也为布尔型。当左右两端的值有一方为True时，其结果就为True，只有在双方都为False时，其结果才为False。<br>not：属于单目运算，其结果也是布尔型。其作用就是求反，如果变量为True，结果为False，如果为False，其结果为True。<br>逻辑运算、比较运算常用在条件中使用。同时，这两种运算符经常配合使用。</p>
-<p>3）循环控制语句<br>for循环<br>第一种：（推荐）<br>for 变量 in 集合：<br>    代码<br>说明：这种循环方式，我们称为快速迭代循环，能够对集合数据进行遍历。<br>注意：这种方式只能用在集合数据上，比如：字符串、列表、元组、字典等内容。<br>例如：<br>string1 = ‘hello world’<br>for item in string1:<br>    print(item)<br>h<br>e<br>l<br>l<br>o</p>
-<p>w<br>o<br>r<br>l<br>d<br>第二种：传统式，配合range()函数使用。通过range()函数指定了循环的范围。<br>for i range(循环次数):<br>    代码</p>
-<p>说明：这种循环方式，采用指定循环次数，对目标集合进行遍历。其做法主要是让循环与集合的下标同步，在循环次数时一同取出集合指定下标的对应值。<br>range()函数：<br>函数格式：<br>range(stop) :缺省情况下，表示从0开始，循环n次<br>range(star,stop[,step])<br>其中，star：循环开始的值，stop：循环次数，step：循环步长。注意此处循环，会根据stop中的值循环规定的次数，但是显示时会从start位置开始。<br>例如：<br>for i in range(3,10):<br>    print(i,end=’ ‘)<br>3 4 5 6 7 8 9<br>for i in range(5,10):<br>    print(i,end=’ ‘)<br>5 6 7 8 9<br>range(1,10)  </p>
-<p>for循环的常用方式：嵌套<br>for i in range(次数):</p>
-<pre><code>for j in range(次数):
-</code></pre><p>注意：在这种嵌套表示的过程中，变量的位置尤为重要，通用原则为：如果变量的值需要通过外层循环来获取或生成，那么我们可以将其设为全局变量，即与外层循环for同等级的变量，如果变量需要在内层循环中生成或获取，我们通常会在外循环中声明，即与内循环同级。<br>while循环<br>格式：while 条件：<br>           代码</p>
-<p>break与continue<br>break：当满足指定条件时，break表示中断（中止）此循环，如果循环外部还有其他代码则继续向下执行。<br>continue：当满足指定条件时，continue表示结束本次循环，开始下一次循环。注意continue并没有退出循环。<br>同时，这两个关键字都是必须配合循环语句来使用，不能单独用在其他地方，比如：if</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/07/12/python_1/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/07/09/hello-world/">Hello World</a>
-    </h1>
-  
-
-        
-        <a href="/2018/07/09/hello-world/" class="archive-article-date">
-  	<time datetime="2018-07-09T12:20:30.884Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-09</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/07/09/hello-world/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
+    <nav id="page-nav">
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+    </nav>
   
 
 
