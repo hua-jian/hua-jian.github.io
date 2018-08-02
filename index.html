@@ -158,9 +158,31 @@
     <article id="post-python_17" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/08/02/python_17/">异常</a>
+    </h1>
+  
+
+        
+        <a href="/2018/08/02/python_17/" class="archive-article-date">
+  	<time datetime="2018-08-02T07:34:12.481Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-02</time>
+</a>
+        
+      </header>
+    
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <p>1）概念：指因程序出错在正常的执行流程之外，采取的行为。异常是一个事件，会在程序的执行过程中执行，并影响程序的执行。<br>2）异常的阶段<br>第一、产生异常（比如：代码错误、业务逻辑错误）<br>第二、处理异常（比如：将异常提示更加可理解、增强代码的健壮性）<br>3）常见的异常类<br>Exception    所有异常的基类<br>NameError    尝试访问一个没有申明的变量<br>ZeroDivisionError    除数为0<br>SyntaxError    语法错误<br>IndexError    索引超出序列范围<br>KeyError    请求一个不存在的字典关键字<br>IOError    输入输出错误（比如你要读的文件不存在）<br>AttributeError    尝试访问未知的对象属性<br>ValueError    传给函数的参数类型不正确<br>EOFError    发现一个不期望的文件尾</p>
+<p>4）异常处理流程<br>基本语法：<br>第一种：<br>try：<br>   可能会产生异常的代码<br>except  对应的异常 as 别名：<br>   异常处理语句</p>
+<p>说明：在try中，放置可能会产生错误的相关代码；except后标明对应的异常类型，一旦try中产生相关异常，except后声明的异常类能够对应捕获，执行相关异常处理语句。如果try外面后续还有其他语句，会继续执行。在产生异常时，出现异常的语句后，如果try中还有其他语句则不会执行。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">a=10</span><br><span class="line">b=0</span><br><span class="line">try:</span><br><span class="line">    <span class="built_in">print</span>(a/b)</span><br><span class="line">except ZeroDivisionError as ex:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">'分母不能为0'</span>)</span><br><span class="line">D:\pythoncode&gt;python d:/pythoncode/lesson57.py</span><br><span class="line">分母不能为0</span><br><span class="line"></span><br><span class="line">D:\pythoncode&gt;</span><br></pre></td></tr></table></figure></p>
+<p>在产生异常时，出现异常的语句后，如果try中还有其他语句则不会执行。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">a=10</span><br><span class="line">b=0</span><br><span class="line">try:</span><br><span class="line">    <span class="built_in">print</span>(a/b)</span><br><span class="line">    <span class="built_in">print</span>(a+b)  <span class="comment">#直接捕获异常，这条语句不会执行</span></span><br><span class="line">except ZeroDivisionError as ex:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">'分母不能为0'</span>)</span><br></pre></td></tr></table></figure></p>
+<p>第二种<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">try:</span><br><span class="line">   可能会产生异常的代码</span><br><span class="line">except 对应的异常 as 别名：</span><br><span class="line">   异常处理语句</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">   程序代码</span><br><span class="line">说明：在此结构中，如果try中的代码出现异常，则使用except后面声明的异常类进行捕获处理，如果没有异常出现，则执行<span class="keyword">else</span>内部的代码。</span><br></pre></td></tr></table></figure></p>
+<p>第三种<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">try:</span><br><span class="line">   可能会产生异常的代码</span><br><span class="line">except 对应的异常 as 别名：</span><br><span class="line">    异常处理语句</span><br><span class="line">except 对应的异常 as 别名：</span><br><span class="line">    异常处理语句</span><br><span class="line">说明：当try中有多行代码可能会出现不同的异常，那么使用多个except与之对应，根据产生异常的顺序来依次捕获处理。</span><br></pre></td></tr></table></figure></p>
+<p>第四种<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">try：</span><br><span class="line">   可能会出产生异常的代码</span><br><span class="line">except 对应的异常 as 别名：</span><br><span class="line">   异常处理语句</span><br><span class="line">finally：</span><br><span class="line">   代码</span><br><span class="line">说明：当异常捕获处理流程中，使用了finally来控制，表明不管是否出现异常进行捕获，最后代码都将允许finally内部的语句。</span><br><span class="line">注意：finally中的语句，不管前面的代码出现何种操作，比如：<span class="built_in">break</span>、<span class="built_in">return</span>、<span class="built_in">exit</span>等都会执行完finally内部的代码后，才会实现。</span><br></pre></td></tr></table></figure></p>
+
       
 
       
