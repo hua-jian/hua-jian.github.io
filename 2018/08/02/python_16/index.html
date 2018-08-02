@@ -6,17 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>�����ļ�������</title>
+  <title>包与模块 | �����ļ�������</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="keywords" content="Python�����棬Web����">
+  <meta name="description" content="#模块1）基本概念：在Python中进行Python定义和声明的文件，以.py结尾。使用import或from   import导入的文件，我们称为模块。 2）模块的优势首先，使用模块，可以将常用的功能和变量，统一分类存储在不同的文件中，在使用时进行导入。提供了代码的可维护性。其次，使用模块因为将常用功能进行了统一调用，提供了代码的复用性最后，解决了在同一个文件中，方法和变量重名的问题。 3）导入">
+<meta name="keywords" content="Python�����棬Web����">
 <meta property="og:type" content="article">
-<meta property="og:title" content="�����ļ�������">
+<meta property="og:title" content="包与模块">
 <meta property="og:url" content="http://yoursite.com/2018/08/02/python_16/index.html">
 <meta property="og:site_name" content="�����ļ�������">
+<meta property="og:description" content="#模块1）基本概念：在Python中进行Python定义和声明的文件，以.py结尾。使用import或from   import导入的文件，我们称为模块。 2）模块的优势首先，使用模块，可以将常用的功能和变量，统一分类存储在不同的文件中，在使用时进行导入。提供了代码的可维护性。其次，使用模块因为将常用功能进行了统一调用，提供了代码的复用性最后，解决了在同一个文件中，方法和变量重名的问题。 3）导入">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-08-02T02:54:39.986Z">
+<meta property="og:updated_time" content="2018-08-02T13:11:24.525Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="�����ļ�������">
+<meta name="twitter:title" content="包与模块">
+<meta name="twitter:description" content="#模块1）基本概念：在Python中进行Python定义和声明的文件，以.py结尾。使用import或from   import导入的文件，我们称为模块。 2）模块的优势首先，使用模块，可以将常用的功能和变量，统一分类存储在不同的文件中，在使用时进行导入。提供了代码的可维护性。其次，使用模块因为将常用功能进行了统一调用，提供了代码的复用性最后，解决了在同一个文件中，方法和变量重名的问题。 3）导入">
   
     <link rel="alternative" href="/atom.xml" title="�����ļ�������" type="application/atom+xml">
   
@@ -157,9 +160,30 @@
             <article id="post-python_16" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      包与模块
+    </h1>
+  
+
+        
+        <a href="/2018/08/02/python_16/" class="archive-article-date">
+  	<time datetime="2018-08-02T02:54:39.986Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-02</time>
+</a>
+        
+      </header>
+    
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <p>#模块<br>1）基本概念：在Python中进行Python定义和声明的文件，以.py结尾。使用import或from   import导入的文件，我们称为模块。</p>
+<p>2）模块的优势<br>首先，使用模块，可以将常用的功能和变量，统一分类存储在不同的文件中，在使用时进行导入。提供了代码的可维护性。<br>其次，使用模块因为将常用功能进行了统一调用，提供了代码的复用性<br>最后，解决了在同一个文件中，方法和变量重名的问题。</p>
+<p>3）导入时的问题<br>如果导入了与文件同名的函数（方法名相同，函数个数相同）时，需要使用模块名调用函数，与文件中的函数进行区分，例如：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">import my</span><br><span class="line">my.show()</span><br><span class="line">def show():</span><br><span class="line">  pass</span><br><span class="line">show()</span><br></pre></td></tr></table></figure></p>
+<p>4)模块可以在Python文件中，实现多次import导入，但是只有第一次导入时才真正将模块中的内容运行、方法载入，其他再进行导入时，Python解析器会先检测是否已经载入该模块，如果载入就不在执行相关操作<br>总结：<br>模块载入一共分三个步骤：<br>1、为模块的导入，创建命名空间（划分新的内存地址），被载入的文件按照全局作用域来使用。<br>2、模块载入后，将在上一步操作中创建的命名空间中，执行模块中的代码<br>3、创建一个模块的名字，来引用模块所在的命名空间。my.show()</p>
+<p>5)当使用from  import引入多个模块时，同时多个模块存在同名函数，那么在程序中调用该函数时，以程序导入的最后一个模块的函数为准。</p>
+<h1 id="包"><a href="#包" class="headerlink" title="包"></a>包</h1><p>1）概念：包在Python中定义为可以包含多个模块文件的目录，其中必须要包含一个名为“<strong>init</strong>.py”的文件，用来初始化包。<br>2）包在调用的使用，首先会初始化<strong>init</strong>.py文件，主要功能为包中模块运行时提供所需要的相关数据，比如：数据库用户名称、密码、地址等内容。</p>
+
       
 
       
